@@ -31,6 +31,7 @@
 }
 .section-link {
   padding: 20px;
+  cursor: url('../../src/img/bxs_hand-down.png') 13 0, pointer;
 }
 .section-link:hover {
   color: blue;
