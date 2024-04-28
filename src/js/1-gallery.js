@@ -30,25 +30,8 @@ function createGalleryMarkup(items) {
 // додаю змінну для отримання шаблонних строк
 const addGalleryMarkup = createGalleryMarkup(images);
 
-console.log(addGalleryMarkup);
 // додаємо шаблонну строку addGalleryMarkup до DOM - ".gallery"
 domGallery.insertAdjacentHTML('beforeend', addGalleryMarkup);
-
-// навіщування event на domGallery по кліку на domGallery
-domGallery.addEventListener('click', onImageClick);
-
-//callback функція для відображення збільшеної картинки
-function onImageClick(event) {
-  //заборона стандартних дій, заавнтаження файлу картинки
-  event.preventDefault();
-
-  //навішування  event на window по кнопці "Escape" для виходу з модалки
-  document.addEventListener('keydown', evt => {
-    if (evt.code === 'Escape') {
-      console.log('CLOSE!');
-    }
-  });
-}
 
 // use library SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -59,6 +42,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   widthRatio: 0.77,
   heightRatio: 0.919,
 });
-
-// const slWrapper = document.querySelector('.sl-overlay');
-// slWrapper.style.backgroundColor = '#2E2F42CC';
