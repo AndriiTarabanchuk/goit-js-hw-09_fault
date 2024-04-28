@@ -26,7 +26,7 @@ formDom.addEventListener('input', throttle(onInputData, 1000));
 
 /**
  * onInputData
- *  колбек функція на зміну значень
+ *  колбек функція на зміну значен ь
  */
 function onInputData() {
   //передача змінених значень у formData
