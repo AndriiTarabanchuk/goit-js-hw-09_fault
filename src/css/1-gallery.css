@@ -14,6 +14,9 @@ body {
   list-style-type: none;
 }
 .gallery-item {
+  position: relative;
+  /* box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); */
 }
 .gallery-link {
 }
@@ -23,10 +26,14 @@ body {
   width: 360px;
   height: 200px;
   transition: width 0.25s ease, height 0.25s ease;
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 .gallery-image:hover {
   transform: scale(calc(376 / 360));
   cursor: url('../../src/img/bxs_hand-down.png') 13 0, pointer;
+  transition: transform var(--animation-duration) var(--timing-function);
 }
 
 div.sl-overlay {
